@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: dev-gateway
+#  cloud:
+#    gateway:
+#        routes:
+#          - id: dev-api1
+#            uri: http://localhost:8081
+#            predicates:
+#              - Path=/api1/**
+#            filters:
+#              - ApiFilter
+#
+#          - id: dev-api2
+#            uri: http://localhost:8082
+#            predicates:
+#              - Path=/api2/**
+server:
+  port: 8080
