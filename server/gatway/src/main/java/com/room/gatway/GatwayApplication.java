@@ -13,7 +13,7 @@ public class GatwayApplication {
 		SpringApplication.run(GatwayApplication.class, args);
 	}
 
-	@Bean
+/*	@Bean
 	public RouteLocator routeLocator(RouteLocatorBuilder builder, ApiFilter apiFilter){
 		return builder.routes()
 				.route("dev-api1",
@@ -25,6 +25,6 @@ public class GatwayApplication {
 						routeSpec ->routeSpec.path("/api2/**").uri("http://localhost:8082")
 				)
 				.build();
-	}
+	}*/
 
 }

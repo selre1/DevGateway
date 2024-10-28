@@ -1,19 +1,31 @@
 spring:
   application:
     name: dev-gateway
-#  cloud:
-#    gateway:
-#        routes:
-#          - id: dev-api1
-#            uri: http://localhost:8081
-#            predicates:
-#              - Path=/api1/**
-#            filters:
-#              - ApiFilter
+  cloud:
+    gateway:
+      routes:
+#        - id: dev-api1
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path=/api1/**
+#          filters:
+#            - ApiFilter
 #
-#          - id: dev-api2
-#            uri: http://localhost:8082
-#            predicates:
-#              - Path=/api2/**
+#        - id: dev-api2
+#          uri: http://localhost:8082
+#          predicates:
+#            - Path=/api2/**
+        - id: dev-api
+          uri: lb://dev-api
+          predicates:
+            - Path=/api/**
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serverUrl:
+      defaultZone: http://server:8761/eureka/
+
 server:
   port: 8080
