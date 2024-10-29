@@ -1,6 +1,6 @@
 {
   "name": "Spring Cloud",
-  "service": "application",
+  "service": "server",
   "dockerComposeFile": "../compose.yml",
-  "workspaceFolder": "/workspaces"
+  "workspaceFolder": "/workspace"
 }

@@ -10,3 +10,7 @@
 
 ### 실행
   - docker-compose up -d
+
+### 접속이슈
+   - docker container는 실행되나 내부 애플리케이션들이 실행되지는 않는다
+   - 따라서 내부 앱들을 실행해주는 dockerfile 작성 필요
