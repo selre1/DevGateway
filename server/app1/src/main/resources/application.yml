@@ -1,13 +1,13 @@
 spring:
-    application:
-        name: dev-api
+  application:
+    name: dev-api
 
 eureka:
-    instance:
-        instance-id: ${spring.cloud.client.ip-address}:${random.value}
-    client:
-        serverUrl:
-            defaultZone: http://server:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${random.value}
+  client:
+  serverUrl:
+    defaultZone: http://server:8761/eureka/
 
 server:
-    port: 0
+  port: 0
